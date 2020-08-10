@@ -11,7 +11,7 @@
 
     <tr *ngFor="let planet of satellites">
         <td>{{planet.name}}</td>
-        <td>{{planet.type}}</td>
+        <td [ngClass] = "{warning: planet.shouldShowWarning()}">{{planet.type}}</td>
         <td>{{planet.operational}}</td>
         <td>{{planet.orbitType}}</td>
         <td>{{planet.launchDate}}</td>
